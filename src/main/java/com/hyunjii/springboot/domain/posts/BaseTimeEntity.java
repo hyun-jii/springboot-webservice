@@ -3,6 +3,7 @@ package com.hyunjii.springboot.domain.posts;
 import lombok.Getter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.EntityListeners;
@@ -19,6 +20,6 @@ public abstract class BaseTimeEntity {
     private LocalDateTime createDate;
 
     // Entity 변경 시 변경 시간 자동 저장
-    @LastModifiedBy
+    @LastModifiedDate
     private LocalDateTime modifiedDate;
 }
