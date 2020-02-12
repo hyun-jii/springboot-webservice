@@ -13,6 +13,7 @@ var main = {
         })
 
     },
+    // 게시글 등록
     save : function () {
         var data = {
             title : $('#title').val(),
@@ -34,6 +35,7 @@ var main = {
         })
     },
 
+    // 게시글 수정
     update : function () {
         var data = {
             title : $('#title').val(),
