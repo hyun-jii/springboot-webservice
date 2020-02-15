@@ -1,5 +1,6 @@
 package com.hyunjii.springboot.web;
 
+import com.hyunjii.springboot.config.auth.LoginUser;
 import com.hyunjii.springboot.config.auth.dto.SessionUser;
 import com.hyunjii.springboot.domain.user.User;
 import com.hyunjii.springboot.service.posts.PostsService;
@@ -21,10 +22,8 @@ public class IndexController {
 
     //조회, 메인 화면 이동
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts",postsService.findAllDesc());
-
-        SessionUser user = (SessionUser)httpSession.getAttribute("user");
 
         if(user != null) {
             model.addAttribute("userName", user.getName());
