@@ -1,5 +1,6 @@
 package com.hyunjii.springboot.domain.posts;
 
+import com.hyunjii.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

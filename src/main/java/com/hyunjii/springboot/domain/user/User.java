@@ -1,6 +1,6 @@
 package com.hyunjii.springboot.domain.user;
 
-import com.hyunjii.springboot.domain.posts.BaseTimeEntity;
+import com.hyunjii.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
